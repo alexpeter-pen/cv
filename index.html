@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="author" content="">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+  :root {
+    --ink: #243743;
+    --navy: #193848;
+    --teal: #195d59;
+    --line: #cbdad9;
+    --gutter: clamp(1.25rem, 6vw, 4rem);
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    background: #edf1f2;
+    color: var(--ink);
+    font: 100%/1.6 "Segoe UI", Arial, sans-serif;
+  }
+
+  body {
+    max-width: 54rem;
+    margin: 2.5rem auto;
+    padding: 0 var(--gutter) 3rem;
+    background: #fff;
+    box-shadow: 0 8px 36px rgb(25 56 72 / 10%);
+  }
+
+  /* Ime i kontakt već su susedni elementi u HTML-u. */
+  #aleksandar-perisic,
+  #aleksandar-perisic + p {
+    margin: 0 calc(-1 * var(--gutter));
+    padding-inline: var(--gutter);
+    background: var(--navy);
+    color: #fff;
+  }
+
+  #aleksandar-perisic {
+    padding-top: 2.3rem;
+    padding-bottom: .45rem;
+    border-top: 5px solid #68b4a7;
+    font: 500 clamp(2rem, 5.5vw, 3.5rem)/1.08 Georgia, serif;
+    letter-spacing: -.035em;
+  }
+
+  #aleksandar-perisic + p {
+    padding-bottom: 1.9rem;
+    color: #e2ebee;
+    font-size: .95rem;
+  }
+
+  #aleksandar-perisic + p strong {
+    display: inline-block;
+    margin-bottom: .45rem;
+    color: #b9e6dc;
+    font-size: 1.13rem;
+    font-weight: 600;
+  }
+
+  #aleksandar-perisic + p a {
+    color: inherit;
+  }
+
+  h2 {
+    margin: 2.2rem 0 .7rem;
+    padding-bottom: .4rem;
+    border-bottom: 1px solid var(--line);
+    color: var(--teal);
+    font-size: .9rem;
+    line-height: 1.4;
+    letter-spacing: .1em;
+  }
+
+  h3 {
+    margin: 1.5rem 0 .45rem;
+    color: var(--navy);
+    font-size: 1.1rem;
+    line-height: 1.4;
+  }
+
+  p {
+    margin: .6rem 0;
+  }
+
+  ul {
+    margin: .4rem 0 1rem;
+    padding-left: 1.25rem;
+  }
+
+  li {
+    padding-left: .12rem;
+  }
+
+  li + li {
+    margin-top: .3rem;
+  }
+
+  li::marker {
+    color: #438078;
+  }
+
+  a {
+    color: #175e75;
+    text-underline-offset: .17em;
+    overflow-wrap: anywhere;
+  }
+
+  a:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 3px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .95rem;
+    line-height: 1.5;
+  }
+
+  th,
+  td {
+    padding: .65rem .8rem;
+    border-bottom: 1px solid #dce5e4;
+    text-align: left;
+    vertical-align: top;
+  }
+
+  th {
+    background: #e6efed;
+    color: #254e4d;
+    font-weight: 650;
+  }
+
+  td:first-child {
+    width: 32%;
+    font-weight: 600;
+  }
+
+  tbody tr:nth-child(even) {
+    background: #f6f9f8;
+  }
+
+  @media (max-width: 44rem) {
+    body {
+      margin: 0 auto;
+    }
+
+    #aleksandar-perisic {
+      padding-top: 1.6rem;
+    }
+
+    th,
+    td {
+      padding: .5rem;
+      overflow-wrap: anywhere;
+    }
+  }
+
+  @page {
+    size: A4;
+    margin: 15mm 17mm;
+  }
+
+  @media print {
+    html,
+    body {
+      background: white;
+      color: #172c36;
+    }
+
+    html {
+      font-size: 10pt;
+    }
+
+    body {
+      max-width: none;
+      margin: 0;
+      padding: 0;
+      box-shadow: none;
+	  color: black;
+    }
+
+    #aleksandar-perisic,
+    #aleksandar-perisic + p {
+      margin: 0;
+      padding-inline: 0;
+      background: white;
+      color: var(--navy);
+    }
+
+    #aleksandar-perisic {
+      padding-top: .65rem;
+      font-size: 26pt;
+    }
+
+    #aleksandar-perisic + p {
+      padding-bottom: .7rem;
+      border-bottom: 1px solid var(--line);
+    }
+
+    #aleksandar-perisic + p strong {
+      color: var(--teal);
+    }
+
+    h2 {
+      margin-top: 1.4rem;
+    }
+
+    h2,
+    h3 {
+      break-after: avoid;
+    }
+
+    tr,
+    li {
+      break-inside: avoid;
+    }
+
+    p,
+    li {
+      orphans: 2;
+      widows: 2;
+    }
+  }
+</style>
+</head>
+
+<body>
+
+<h1 id="aleksandar-perisic">ALEKSANDAR PERISIC</h1>
+<p><strong>Senior Software Developer | C# · .NET · Azure</strong><br>Belgrade, Serbia<br><a href="mailto:alexpeter.pen@gmail.com">alexpeter.pen@gmail.com</a> · +381 63 8781 019</p>
+<h2 id="objective">OBJECTIVE</h2>
+<p>To contribute as a senior developer or technical lead on projects that combine hands-on .NET development, system integration and software architecture.</p>
+<h2 id="professional-summary">PROFESSIONAL SUMMARY</h2>
+<p>Microsoft Certified Professional with three decades of software development experience in Serbia, Norway, Ireland, Canada, Switzerland and the United States. Experienced in C# and .NET development, distributed backend systems on Azure, React web applications and relational database design. Career spans emergency services, banking, insurance, financial market data, telecommunications and engineering software.</p>
+<p>Comfortable taking responsibility for a feature from requirements and design through implementation, testing and deployment. Experienced in leading technical work, integrating third-party platforms, maintaining legacy applications and diagnosing problems that cross team and system boundaries.</p>
+<h2 id="technical-skills">TECHNICAL SKILLS</h2>
+<table>
+<thead>
+<tr>
+<th>Area</th>
+<th>Technologies and experience</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Core development</td>
+<td>C#, .NET, ASP.NET MVC, JavaScript, TypeScript, React, SQL</td>
+</tr>
+<tr>
+<td>Cloud and distributed systems</td>
+<td>Azure, Azure Functions, Azure WebJobs, Kubernetes, NServiceBus, Redis, Terraform, AWS</td>
+</tr>
+<tr>
+<td>Databases and data access</td>
+<td>Microsoft SQL Server, Oracle 11g/12c, MySQL, SQLite, Azure Cosmos DB / DocumentDB, Entity Framework, NHibernate</td>
+</tr>
+<tr>
+<td>Web and identity</td>
+<td>EPiServer, HTML, CSS, jQuery, XML, IdentityServer3, single sign-on</td>
+</tr>
+<tr>
+<td>Desktop and mobile</td>
+<td>C++, MFC, Windows desktop development, .NET Compact Framework, Xamarin</td>
+</tr>
+<tr>
+<td>Development and delivery</td>
+<td>Visual Studio, Git, SVN, Jenkins, Octopus Deploy, automated testing, UML</td>
+</tr>
+<tr>
+<td>Additional languages</td>
+<td>Python, F#</td>
+</tr>
+</tbody>
+</table>
+<h2 id="education-and-certification">EDUCATION AND CERTIFICATION</h2>
+<p><strong>University of Belgrade</strong><br>M.Sc. in Computer Technique and Information Science</p>
+<p><strong>Microsoft Certified Professional</strong></p>
+<h2 id="professional-experience">PROFESSIONAL EXPERIENCE</h2>
+<h3 id="independent-consultant-belgrade-2025-present-senior-software-consultant">Independent Consultant, Belgrade (2025–present) — Senior Software Consultant</h3>
+<ul>
+<li>Join client development teams to deliver specific features, integrations and architectural improvements across business applications.</li>
+<li>Design, develop, test and maintain software, working with existing codebases and deployment processes.</li>
+<li>Advise clients on code quality, system architecture and maintainability, and help teams implement the improvements agreed during review.</li>
+</ul>
+<h3 id="enghouse-locus-oslo-2024-2025-senior-software-developer">Enghouse / Locus, Oslo (2024–2025) — Senior Software Developer</h3>
+<ul>
+<li>Developed and tested full-stack features for an emergency coordination platform designed to serve fire, ambulance, hospital and other response services across Norway.</li>
+<li>Worked on modules that brought together geographic information, patient details and the current availability of ambulances and hospital beds. Operational updates had to reach coordinators within seconds.</li>
+<li>Implemented features and resolved defects across C#, .NET, TypeScript and React components as the platform was prepared for a regional pilot.</li>
+</ul>
+<h3 id="if-insurance-oslo-2023-2024-senior-software-developer">If Insurance, Oslo (2023–2024) — Senior Software Developer</h3>
+<ul>
+<li>Developed C#/.NET services for generating and printing monthly insurance statements and payment reminders. Also worked on React applications and third-party integrations.</li>
+<li>Supported the transition from a system built around a single database and extensive stored procedures to a microservice architecture that retained selected legacy components.</li>
+</ul>
+<p><strong>Engineering challenge —</strong> An incorrect figure on a monthly statement could originate several systems upstream. I traced discrepancies back to the service that supplied the data, worked across teams to correct the cause and verified each fix against the statement the customer would receive.</p>
+<h3 id="morrow-bank-komplett-bank-oslo-2019-2023-senior-software-developer">Morrow Bank / Komplett Bank, Oslo (2019–2023) — Senior Software Developer</h3>
+<ul>
+<li>Developed backend services for anti-money-laundering requirements and regulatory credit reporting, including integrations with third-party systems.</li>
+<li>Developed an early arrears notification system that identified missed payments and reminded customers before their accounts were referred to an external collection agency.</li>
+<li>Served as team lead or technical lead on individual projects. Technologies included C#, .NET, Azure Functions, WebJobs, Kubernetes, Redis, Cosmos DB, SQL and Terraform.</li>
+</ul>
+<p><strong>Engineering challenge —</strong> A regulatory reporting deadline coincided with the bank’s migration to Azure. I implemented messaging with NServiceBus and tracked both delivery and data freshness so the team could distinguish a missing report from one that had arrived with outdated figures.</p>
+<h3 id="allente-canal-digital-oslo-2017-2019-senior-software-developer">Allente / Canal Digital, Oslo (2017–2019) — Senior Software Developer</h3>
+<ul>
+<li>Developed customer-facing web applications for the Nordic satellite television business using C#, ASP.NET MVC, EPiServer and React.</li>
+<li>Helped migrate the front end to React to support new interface requirements. Used Adobe Analytics to assess which content and features attracted customer interest.</li>
+<li>Implemented localization features and managed application deployments through Jenkins and Octopus Deploy.</li>
+</ul>
+<h3 id="infront-oslo-2016-2017-senior-software-developer">Infront, Oslo (2016–2017) — Senior Software Developer</h3>
+<ul>
+<li>Maintained AWS-hosted back-office applications that tracked financial market data subscriptions and the commercial relationships between Infront, its distributors and their customers.</li>
+<li>Developed single sign-on support using IdentityServer3. Integrated partners with different authentication methods while preserving the sign-in process their customers already used.</li>
+<li>Worked on token-based identity handling and collaborated with the open-source community on implementation issues.</li>
+</ul>
+<h3 id="energodata-belgrade-2014-2016-senior-software-developer">Energodata, Belgrade (2014–2016) — Senior Software Developer</h3>
+<ul>
+<li>Developed ASP.NET MVC and Entity Framework applications for a telecommunications customer-data migration.</li>
+<li>Designed Oracle 11g databases and shared data models used across several applications.</li>
+<li>Built web interfaces for monitoring the conversion of customer records, checking migration progress and verifying the data in its new format.</li>
+</ul>
+<h3 id="exprosoft-trondheim-2011-2013-senior-software-consultant">Exprosoft, Trondheim (2011–2013) — Senior Software Consultant</h3>
+<ul>
+<li>Developed ASP.NET MVC applications for oil and gas engineers assessing well conditions and prioritizing repairs.</li>
+<li>Worked on interfaces that displayed rig configurations, pressure and temperature readings alongside historical well data. Integrated customer databases, including live operational readings where available.</li>
+<li>Developed automated tests and prepared representative datasets for testing application behaviour and customer-specific integrations.</li>
+</ul>
+<h3 id="fara-trondheim-2010-2011-software-developer">Fara, Trondheim (2010–2011) — Software Developer</h3>
+<ul>
+<li>Maintained public transport software used in Norwegian and Swedish towns, including fare collection, departure information at stops and onboard displays for passenger information and advertising.</li>
+<li>Supported products inherited through several acquisitions, ranging from legacy Windows applications and Visual SourceSafe repositories to newer .NET systems.</li>
+<li>Investigated field reports across these different codebases, identified which application controlled the affected equipment and verified fixes against the behaviour visible to passengers and operators.</li>
+</ul>
+<h3 id="teletrader-belgrade-2007-2010-software-developer">TeleTrader, Belgrade (2007–2010) — Software Developer</h3>
+<ul>
+<li>Developed and maintained features for a real-time financial market terminal used by brokers, working with C++, MFC, C#, .NET and XML.</li>
+<li>Designed and updated desktop interface components and worked on market-data analysis and display.</li>
+<li>Updated the application and its development environment to Visual Studio 2008.</li>
+</ul>
+<p><strong>Engineering challenge —</strong> I made an individual window from the native C++/MFC terminal usable inside a separate .NET application. The window continued to receive live market data, process Windows messages and respond to user input just as it did inside the original terminal.</p>
+<h3 id="microsoft-seattle-2006-2007-software-development-engineer-in-test-globalization-and-localization">Microsoft, Seattle (2006–2007) — Software Development Engineer in Test, Globalization and Localization</h3>
+<ul>
+<li>Developed C#/.NET tools supporting Windows localization and the preparation of Microsoft products for translation into more than 100 languages.</li>
+<li>Automated the collection of product binaries and generation of XML translation files across products including Office and SQL Server. A centralized run completed in a few hours and alerted product teams to resource errors before translation began.</li>
+<li>Analyzed recurring Windows localization defects, including incorrect font selection, untranslated images and layout errors in right-to-left interfaces.</li>
+</ul>
+<p><strong>Engineering challenge —</strong> A right-to-left interface can require a mirrored layout while an image inside it must keep its original orientation. I reviewed recurring cases like this and documented rules that let the team automate routine decisions, leaving only a small set of ambiguous cases for manual review.</p>
+<h3 id="eyep-media-sa-switzerland-2004-2005-software-developer">eyeP Media SA, Switzerland (2004–2005) — Software Developer</h3>
+<ul>
+<li>Adapted the company’s desktop Voice over IP technology for the Qtek 8310 smartphone using the .NET Compact Framework.</li>
+<li>Integrated the existing communications module into a working mobile application that could place calls to another VoIP client.</li>
+<li>Delivered the functional prototype used to demonstrate the mobile product and help secure CHF 2 million for further development.</li>
+</ul>
+<h3 id="radimpex-belgrade-2003-2004-software-developer-norma-base-plus">Radimpex, Belgrade (2003–2004) — Software Developer, Norma Base Plus</h3>
+<ul>
+<li>Held development responsibility for Norma Base Plus, a construction estimating and project accounting application, over a two-year period.</li>
+<li>Developed functionality for bills of quantities, cost estimates, tenders, progress valuations, construction records and price analysis across building, civil engineering and installation works.</li>
+<li>The version delivered remained in use for approximately ten years, until its replacement in 2016.</li>
+</ul>
+<h3 id="wyeth-canada-2001-2002-software-developer">Wyeth, Canada (2001–2002) — Software Developer</h3>
+<ul>
+<li>Spent one year developing an ASP.NET web application backed by Oracle to digitize records used to track new pharmaceutical products.</li>
+<li>Translated workflows from an extensive paper archive into electronic forms and database records so staff could retrieve and review information previously held in physical files.</li>
+</ul>
+<h3 id="national-post-canada-2001-software-developer">National Post, Canada (2001) — Software Developer</h3>
+<ul>
+<li>Worked in a three-person team on a six-month project to build an online newspaper advertising system.</li>
+<li>Developed functionality that allowed customers to select advertisement sizes, specify campaigns and submit orders directly.</li>
+<li>The company that subsequently took over the service retained the application and adapted its branding.</li>
+</ul>
+<h3 id="accuris-ireland-2000-software-developer">Accuris, Ireland (2000) — Software Developer</h3>
+<ul>
+<li>Worked on a six-month project developing a web application for the configuration and pricing of lawful telecommunications monitoring services.</li>
+<li>Implemented quotation calculations based on the selected service, equipment, installation quantities and locations, together with the associated print functionality.</li>
+</ul>
+<h3 id="minel-trafo-serbia-1997-1999-software-developer">Minel Trafo, Serbia (1997–1999) — Software Developer</h3>
+<ul>
+<li>Developed Windows desktop applications used by engineers designing medium-power distribution transformers.</li>
+<li>Implemented transformer design calculations and temperature simulations using C++, MFC and Visual Studio.</li>
+<li>Developed a company web application and provided on-site technical support for workstations and peripherals.</li>
+</ul>
+<h3 id="infostan-belgrade-1996-1997-software-developer">Infostan, Belgrade (1996–1997) — Software Developer</h3>
+<ul>
+<li>Served as the primary developer of linked attendance and payroll applications covering approximately 300 employees, using a COBOL-based mainframe environment.</li>
+<li>Integrated card-reader attendance records with payroll calculations. Built a calendar interface for reviewing attendance, entering corrections and accounting for sick leave and annual leave.</li>
+<li>Implemented payroll document printing and designed the applications so they could also be used by other organizations operating a compatible mainframe.</li>
+</ul>
+<h3 id="ei-pupin-zemun-1995-1996-software-developer">EI Pupin, Zemun (1995–1996) — Software Developer</h3>
+<ul>
+<li>Programmed telephone exchanges to meet operational requirements, including alarm configuration, call transfers and related switching functions.</li>
+</ul>
+<h2 id="foreign-languages">FOREIGN LANGUAGES</h2>
+<table>
+<thead>
+<tr>
+<th>Language</th>
+<th>Proficiency</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>English</td>
+<td>Fluent</td>
+</tr>
+<tr>
+<td>French</td>
+<td>Good</td>
+</tr>
+<tr>
+<td>German, Spanish, Norwegian</td>
+<td>Basic</td>
+</tr>
+</tbody>
+</table>
+<h2 id="publications">PUBLICATIONS</h2>
+<p>Perisic, A. (2026). <em>Correct Software by Risk Distribution</em>. Zenodo. <a href="https://doi.org/10.5281/zenodo.20277303">https://doi.org/10.5281/zenodo.20277303</a></p>
+<h2 id="personal-interests">PERSONAL INTERESTS</h2>
+<p>I enjoy music, particularly playing classical guitar, and have a longstanding interest in film. Outside my professional work, I pursue independent research in mathematics and explore how artificial intelligence can help develop conjectures, test examples and refine mathematical arguments.</p>
+
+</body>
+
+</html>
