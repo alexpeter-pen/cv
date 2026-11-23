@@ -230,15 +230,147 @@
       widows: 2;
     }
   }
+
+.cv-hero {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  padding: 2.5rem 2rem;
+  border-radius: 18px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #061a3a 0%, #04132b 55%, #082448 100%);
+  color: #f5f2ea;
+}
+
+.cv-hero-text {
+  position: relative;
+  z-index: 2;
+  flex: 1 1 60%;
+  max-width: 700px;
+}
+
+.cv-hero h1 {
+  margin: 0 0 0.6rem 0;
+  font-size: clamp(2.2rem, 5vw, 4.8rem);
+  line-height: 1.05;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.cv-hero p {
+  margin: 0;
+  font-size: 1.08rem;
+  line-height: 1.65;
+  color: #f3f4f6;
+}
+
+.cv-hero p strong {
+  display: inline-block;
+  font-size: 1.2rem;
+  margin-bottom: 0.35rem;
+}
+
+.cv-hero a {
+  color: #c7f3ff;
+  text-decoration: none;
+}
+
+.cv-hero a:hover {
+  text-decoration: underline;
+}
+
+.cv-hero-art {
+  position: relative;
+  z-index: 1;
+  flex: 0 0 260px;
+  height: 260px;
+  min-width: 220px;
+}
+
+.cv-hero-art,
+.cv-hero-art::before,
+.cv-hero-art::after {
+  background: linear-gradient(180deg, rgba(125, 255, 244, 0.28), rgba(75, 220, 210, 0.18));
+  border: 1px solid rgba(180, 255, 248, 0.55);
+  box-shadow: 0 0 35px rgba(70, 220, 210, 0.18);
+  backdrop-filter: blur(2px);
+}
+
+.cv-hero-art {
+  clip-path: polygon(36% 0, 100% 0, 100% 100%, 0 100%, 0 32%);
+  opacity: 0.95;
+}
+
+.cv-hero-art::before,
+.cv-hero-art::after {
+  content: "";
+  position: absolute;
+  inset: auto;
+}
+
+.cv-hero-art::before {
+  width: 210px;
+  height: 210px;
+  right: 115px;
+  bottom: -8px;
+  clip-path: polygon(36% 0, 100% 0, 100% 100%, 0 100%, 0 32%);
+  opacity: 0.72;
+}
+
+.cv-hero-art::after {
+  width: 150px;
+  height: 150px;
+  right: 225px;
+  bottom: -8px;
+  clip-path: polygon(36% 0, 100% 0, 100% 100%, 0 100%, 0 32%);
+  opacity: 0.52;
+}
+
+@media (max-width: 900px) {
+  .cv-hero {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cv-hero-art {
+    align-self: flex-end;
+    width: 220px;
+    height: 220px;
+    flex: none;
+  }
+
+  .cv-hero-art::before {
+    width: 175px;
+    height: 175px;
+    right: 90px;
+  }
+
+  .cv-hero-art::after {
+    width: 125px;
+    height: 125px;
+    right: 170px;
+  }
+}  
 </style>
 </head>
 
 <body>
 
 
-<h1 id="aleksandar-perisic">ALEKSANDAR PERISIC</h1>
-<p><strong>Senior Software Developer | AI · C# · .NET · Azure</strong><br>Belgrade, Serbia<br><a href="mailto:alexpeter.pen@gmail.com">alexpeter.pen@gmail.com</a> · +381 63 8781 019</p>
-
+<div class="cv-hero">
+  <div class="cv-hero-text">
+    <h1 id="aleksandar-perisic">ALEKSANDAR PERISIC</h1>
+    <p>
+      <strong>Senior Software Developer | AI · C# · .NET · Azure</strong><br>
+      Belgrade, Serbia<br>
+      <a href="mailto:alexpeter.pen@gmail.com">alexpeter.pen@gmail.com</a> · +381 63 8781 019
+    </p>
+  </div>
+  <div class="cv-hero-art" aria-hidden="true"></div>
+</div>
+  
 <h2 id="objective">OBJECTIVE</h2>
 <p>To contribute as a senior developer or technical lead on projects combining hands-on .NET development, system integration, software architecture and responsible use of AI-assisted development tools, with a strong focus on code quality and validation.</p>
 
@@ -294,7 +426,7 @@
 <ul>
 <li>Join client development teams to deliver specific features, integrations and architectural improvements across business applications.</li>
 <li>Design, develop, test and maintain software, working with existing codebases and deployment processes.</li>
-<li>Advise clients on code quality, system architecture and maintainability, and help teams implement the improvements agreed during review.</li>
+<li>Advise clients on architecture and maintainability, review and validate AI-assisted code, and help teams implement improvements.</li>
 </ul>
 <h3 id="enghouse-locus-oslo-2024-2025-senior-software-developer">Enghouse / Locus, Oslo (2024–2025) — Senior Software Developer</h3>
 <ul>
@@ -434,4 +566,5 @@
 </body>
 
 </html>
+
 
